@@ -7,3 +7,4 @@ a=10
 b=20
 add=10+20
 print(add)
+print('Added code')
