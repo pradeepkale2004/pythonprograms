@@ -19,4 +19,4 @@ while low!=high:
         break
     guesses = guesses +1
 else:
-    print(f'You are guessing the {low} number') nf\  dlfnnn
+    print(f'You are guessing the {low} number')
