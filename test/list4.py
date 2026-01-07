@@ -16,7 +16,7 @@ for index1 ,meal1 in enumerate(menu):
 for meal2 in menu:
     for index in range (len(meal2)-1,-1,-1):
         if meal2[index]=='spam':
-            del(meal2[index])
+            del meal2[index]
     print(meal2)
 
 # print('New Menu after deleting spam')
@@ -26,7 +26,7 @@ for meal2 in menu:
 for meal4 in menu:
     for item in meal4:
         if item != "spam":
-            print(item)
+            print(item, end=' ')
     print()
 
 
