@@ -37,4 +37,4 @@ albums = [
      ]
      ),
 ]
-print(albums)
+print(albums[1],[1],[1])
