@@ -37,4 +37,16 @@ albums = [
      ]
      ),
 ]
-print(albums[1],[1],[1])
+while True:
+    print('Please choose your album')
+    for index, (title, artist ,year, song) in enumerate(albums):
+        print(f'{index+1} {title}')
+
+    choice= int(input())
+    if 1 <= choice < len(albums)+1:
+        song_list=(albums[choice-1][3])
+    else:
+        print('Enter the valid choice')
+        break
+    print(albums[choice-1])
+    print(song_list)
