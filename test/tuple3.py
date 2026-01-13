@@ -37,6 +37,9 @@ albums = [
      ]
      ),
 ]
+SONGS_LIST_INDEX=3
+SONGS_TITLE_INDEX = 1
+
 while True:
     print('Please choose your album')
     for index, (title, artist ,year, song) in enumerate(albums):
@@ -44,9 +47,22 @@ while True:
 
     choice= int(input())
     if 1 <= choice < len(albums)+1:
-        song_list=(albums[choice-1][3])
+        song_list=(albums[choice-1][SONGS_LIST_INDEX])
     else:
         print('Enter the valid choice')
         break
     print(albums[choice-1])
     print(song_list)
+
+    print('Choose the song')
+    for index, (track_number, song) in enumerate (song_list):
+        print(f'{index+1} {song}')
+
+    song_choice = int(input())
+    if 1 <= song_choice <=len(song_list):
+        title =song_list[song_choice-1][SONGS_TITLE_INDEX]
+        print(f'Playing {title}')
+        print('=' * 40)
+
+
+
