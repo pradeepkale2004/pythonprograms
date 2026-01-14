@@ -4,3 +4,4 @@ def multiply():
 
 res=multiply()
 print(res)
+print()
