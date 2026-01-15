@@ -1,14 +1,28 @@
-answer=5
+answer = 5
 print('Guess the number between 1 to 10')
-guess=int(input())
 
-if answer!=guess:
-    if guess<answer:
+
+def get_integer(prompt):
+    while True:
+        temp = input(prompt)
+        if temp.isnumeric():
+            return int(temp)
+
+        print(f'{temp} is not an valid number')
+
+
+guess = get_integer(': ')
+print(guess)
+
+# guess = int(input())
+
+if answer != guess:
+    if guess < answer:
         print('Guess higher number')
     else:
         print('Guess lower number')
-    guess=int(input())
-    if guess==answer:
+    guess = int(input())
+    if guess == answer:
         print('You Guess it correctly')
     else:
         print('You didnt guess correctly')
