@@ -1,13 +1,12 @@
 def banner_text(text):
-    screen_Width=80
-    if len(text) > screen_Width-4:
-        print('EEK!!')
-        print('The text is too long to fir in the specified width')
+    screen_width=80
+    if len(text) > screen_width-4:
+        raise ValueError(f'{text} is larger than specified width of {screen_width}')
 
     if text == '*':
-        print('*' * screen_Width )
+        print('*' * screen_width )
     else:
-        centered_text=text.center(screen_Width-4)
+        centered_text=text.center(screen_width-4)
         output_string = f'**{centered_text}**'
         print(output_string)
 
